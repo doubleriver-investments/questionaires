@@ -1,0 +1,56 @@
+PORT w/ Bloomberg (PMS)
+AIM w/ Bloomberg
+EMS-X w/ Bloomberg
+
+We don't worry about OMS because we only have one fund.
+
+OMS Reqs: Needs to be squeaky clean, needs to avoid front running.
+
+
+Bloomberg's PMS is worthwhile.
+
+EMS does not track historic trades
+
+Dividends immediately shown although not tradable yet? (Ask Enfusion)
+
+--
+
+Fund admins; which ones do they work with?
+
+Otso if it works out, Dan for sure.
+
+Cash accounts outside trade accounts should be tracked as if they were outside client. We DO need to implement cash accounts.
+
+--
+
+Our funds are performance fee focused; try to align incentives, make us hurt when the client is hurt.
+
+2yr period where we track alpha, then we take performance fee from oldest quarter, recalculated and drawn in each quarter. This is different from, say, a day-to-day & withdraw if alpha situation.
+
+Virtual shares per client.
+
+Enfusion doesn't offer tracking of virtual client shares.
+
+In most cases, the fund admin will do those calculations. The accounting GL is not meant to be a source of record, it is "shadow functionality".
+
+--
+
+Very important that we get the most recent prices for the sake of automated strategies.
+
+Emerging markets and the nuance here.
+
+We might want to get a list of exchanges from Micah and cross-check it w/ Enfusion.
+
+Bloomberg Data License
+
+Cannot pull real-time data via API.
+--
+
+Apparently, there is one-off brokers that might give us better commissions.
+The question is whether we integrate with these "one-off" brokers or not.
+Ideally, even THESE trades to exotic brokers would be automated.
+But it would be costly.
+
+VCSCS is a potential broker.
+
+We have a contract w/ Bloomberg, %15 exit fee of the rest of the value of the contract.
